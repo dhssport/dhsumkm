@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solusi Bisnis Terpercaya | Mitra UMKM Anda</title>
+    <meta name="description"
+        content="Jasa profesional dan terpercaya untuk membantu pertumbuhan bisnis UMKM Anda. Garansi resmi dan harga terjangkau.">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#1e40af', // Blue 800
+                        dark: '#0f172a', // Slate 900
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for nuances not covered by utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.6));
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-600 antialiased bg-slate-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="bg-primary text-white p-2 rounded-lg">
+                            <i data-lucide="briefcase" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-2xl text-dark tracking-tight">Mitra<span
+                                class="text-primary">UMKM</span></span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-700 hover:text-primary font-medium transition-colors">Beranda</a>
+                    <a href="#features"
+                        class="text-slate-700 hover:text-primary font-medium transition-colors">Keunggulan</a>
+                    <a href="#services"
+                        class="text-slate-700 hover:text-primary font-medium transition-colors">Layanan</a>
+                    <a href="#testimonials"
+                        class="text-slate-700 hover:text-primary font-medium transition-colors">Testimoni</a>
+                    <a href="#faq" class="text-slate-700 hover:text-primary font-medium transition-colors">FAQ</a>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda"
+                        class="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                        Hubungi Kami
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home"
+                    class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg">Beranda</a>
+                <a href="#features"
+                    class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg">Keunggulan</a>
+                <a href="#services"
+                    class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg">Layanan</a>
+                <a href="#testimonials"
+                    class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg">Testimoni</a>
+                <a href="#faq"
+                    class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg">FAQ</a>
+                <a href="https://wa.me/6281234567890"
+                    class="block px-3 py-3 mt-4 text-center text-base font-bold text-white bg-primary rounded-lg shadow-md">
+                    Hubungi Kami via WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 lg:pt-28 pb-20 lg:pb-32 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+                alt="Office Background" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto space-y-8 animate-fade-in-up">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-sm font-semibold tracking-wide uppercase mb-2 backdrop-blur-sm">
+                    Mitra Terpercaya UMKM Indonesia
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Solusi Jasa Terbaik untuk <br class="hidden md:block" /> Pertumbuhan <span
+                        class="text-blue-400">Bisnis Anda</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto">
+                    Kami membantu bisnis Anda berkembang dengan layanan profesional, tim ahli, dan hasil yang terukur.
+                    Fokus pada bisnis, biar kami yang urus sisanya.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#services"
+                        class="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-secondary text-white rounded-lg font-bold text-lg shadow-lg shadow-blue-500/40 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Pesan Sekarang
+                        <i data-lucide="arrow-right-circle" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/6281234567890"
+                        class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2">
+                        Konsultasi Gratis
+                    </a>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 text-white/80">
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">500+</span>
+                    <span class="text-sm">Klien Puas</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">5 Tahun</span>
+                    <span class="text-sm">Pengalaman</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">24/7</span>
+                    <span class="text-sm">Support</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">100%</span>
+                    <span class="text-sm">Garansi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-primary font-semibold tracking-wide uppercase mb-2">Kenapa Memilih Kami?</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark mb-4">Keunggulan Layanan Kami</h3>
+                <p class="text-slate-600 text-lg">Kami berkomitmen memberikan yang terbaik untuk setiap klien dengan
+                    standar kualitas tinggi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Feature 1 -->
+                <div
+                    class="group p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Garansi Resmi</h4>
+                    <p class="text-slate-600">Setiap layanan kami dilindungi garansi kepuasan 100%. Jika tidak sesuai,
+                        kami perbaiki gratis.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="group p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Tim Ahli & Profesional</h4>
+                    <p class="text-slate-600">Dikerjakan oleh tenaga ahli yang berpengalaman bertahun-tahun di
+                        bidangnya.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="group p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="wallet" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark mb-3">Harga Terjangkau</h4>
+                    <p class="text-slate-600">Solusi terbaik dengan harga yang ramah untuk UMKM tanpa mengurangi
+                        kualitas layanan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Paket Layanan Kami</h2>
+                <p class="text-slate-600 text-lg">Pilih paket yang sesuai dengan kebutuhan bisnis Anda saat ini.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 service-card">
+                    <div class="relative h-48 bg-gray-200 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
+                            alt="Service 1"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold text-primary shadow-sm">
+                            Best Seller
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Digital Marketing Basic</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Optimasi sosial media dan konten untuk
+                            meningkatkan engagement pelanggan.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> 12 Content
+                                Feed/Bulan
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Admin Posting
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Monthly Report
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-100">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Mulai dari</span>
+                                <span class="text-xl font-bold text-primary">Rp 1.5jt<span
+                                        class="text-sm font-normal text-slate-400">/bln</span></span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Order%20Digital%20Marketing"
+                                class="p-2 bg-slate-100 hover:bg-primary text-slate-600 hover:text-white rounded-lg transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 service-card">
+                    <div class="relative h-48 bg-gray-200 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80"
+                            alt="Service 2"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Pembuatan Website</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Website landing page profesional yang cepat,
+                            responsif, dan SEO friendly.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Domain &
+                                Hosting 1 Th
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Mobile
+                                Responsive
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> SEO Basic
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-100">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Mulai dari</span>
+                                <span class="text-xl font-bold text-primary">Rp 2.5jt</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Order%20Website"
+                                class="p-2 bg-slate-100 hover:bg-primary text-slate-600 hover:text-white rounded-lg transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 service-card">
+                    <div class="relative h-48 bg-gray-200 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80"
+                            alt="Service 3"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Konsultan Pajak & Legal</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Bantuan pengurusan izin usaha (NIB, PT/CV)
+                            dan pelaporan pajak bulanan.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Pembuatan PT/CV
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Laporan Pajak
+                            </li>
+                            <li class="flex items-center text-sm text-slate-600">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2"></i> Konsultasi
+                                Gratis
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-100">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Mulai dari</span>
+                                <span class="text-xl font-bold text-primary">Rp 500rb</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Order%20Legalitas"
+                                class="p-2 bg-slate-100 hover:bg-primary text-slate-600 hover:text-white rounded-lg transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-12">Apa Kata Mereka?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Pelayanannya sangat memuaskan, admin ramah dan teknisinya
+                        sangat profesional. Bisnis saya jadi lebih tertata. Sangat recommended!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                            alt="Client 1" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h5 class="font-bold text-dark">Budi Santoso</h5>
+                            <span class="text-xs text-slate-500">Owner Kopi Kenangan Hati</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Website yang dibuatkan sangat bagus dan cepat. Penjualan
+                        online saya naik 50% dalam bulan pertama. Terima kasih tim!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359-136d475526c0?auto=format&fit=crop&q=80"
+                            alt="Client 2" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h5 class="font-bold text-dark">Siti Aminah</h5>
+                            <span class="text-xs text-slate-500">Distributor Batik Solo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        <i data-lucide="star-half" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Legalitas perusahaan selesai tepat waktu tanpa ribet. Harga
+                        juga sangat transparan dari awal."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
+                            alt="Client 3" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h5 class="font-bold text-dark">Rizky Pratama</h5>
+                            <span class="text-xs text-slate-500">CEO Startup Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Pertanyaan Umum (FAQ)</h2>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-100 overflow-hidden">
+                    <button
+                        class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-slate-800">Bagaimana cara melakukan pemesanan?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-slate-600">Anda dapat langsung menghubungi kami melalui tombol WhatsApp yang
+                            tersedia. Tim kami akan segera merespon dan memandu Anda untuk memilih layanan yang sesuai.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-100 overflow-hidden">
+                    <button
+                        class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-slate-800">Apakah ada garansi uang kembali?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-slate-600">Ya, kami memberikan garansi uang kembali 100% jika hasil pekerjaan
+                            tidak sesuai dengan kesepakatan awal atau jika ada kendala fatal dari sisi kami.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-100 overflow-hidden">
+                    <button
+                        class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-slate-800">Berapa lama proses pengerjaannya?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-slate-600">Durasi pengerjaan bervariasi tergantung jenis layanan. Untuk website
+                            biasanya 3-7 hari, sedangkan legalitas bisa 7-14 hari kerja.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <div class="bg-primary p-1.5 rounded-lg">
+                            <i data-lucide="briefcase" class="w-5 h-5"></i>
+                        </div>
+                        Mitra<span class="text-primary">UMKM</span>
+                    </h3>
+                    <p class="text-slate-400 mb-6">Partner terbaik untuk pertumbuhan bisnis Anda. Professional,
+                        Terpercaya, dan Terjangkau.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="facebook"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="twitter"
+                                class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Layanan</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Pembuatan Website</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Desain Grafis</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Legalitas Usaha</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Link Cepat</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#home" class="hover:text-primary transition-colors">Beranda</a></li>
+                        <li><a href="#features" class="hover:text-primary transition-colors">Tentang Kami</a></li>
+                        <li><a href="#testimonials" class="hover:text-primary transition-colors">Testimoni</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Kontak Kami</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-1"></i>
+                            <span>Jl. Jendral Sudirman No. 123, Jakarta Selatan, 12190</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                            <span>info@mitraumkm.id</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                            <span>Senin - Sabtu: 09:00 - 17:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 MitraUMKM Indonesia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- GANTILAH NOMOR DI BAWAH INI DENGAN NOMOR WHATSAPP ASLI ANDA (CONTOH: 62812...) -->
+    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Anda" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-green-500 text-white rounded-full p-4 shadow-xl hover:bg-green-600 transition-all hover:-translate-y-1 animate-pulse-slow flex items-center justify-center group"
+        title="Hubungi Kami via WhatsApp">
+        <i data-lucide="message-circle" class="w-8 h-8 fill-white text-green-500"></i>
+        <!-- Tooltip effect -->
+        <span
+            class="absolute right-full mr-4 bg-dark text-white text-xs py-1 px-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Chat WhatsApp
+        </span>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+
+                // Toggle current
+                content.classList.toggle('hidden');
+
+                // Rotate Icon
+                if (content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+
+                // Close other items (optional, remove this block if you want multiple open)
+                faqBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        const otherContent = otherBtn.nextElementSibling;
+                        const otherIcon = otherBtn.querySelector('i');
+                        otherContent.classList.add('hidden');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Navbar Blur Effect on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+
+</html>

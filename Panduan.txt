@@ -1,0 +1,61 @@
+============================================================
+       TERIMA KASIH TELAH BERBELANJA DI DHS STUDIO
+          "Solusi Website Profesional & Mudah"
+============================================================
+
+Terima kasih telah mempercayakan kebutuhan website bisnis Anda 
+kepada DHS Studio. File ini dirancang khusus agar mudah diedit 
+bahkan bagi Anda yang tidak paham bahasa pemrograman.
+
+Silakan ikuti petunjuk di bawah ini langkah-demi-langkah.
+
+------------------------------------------------------------
+1. CARA MENGEDIT TEKS & NAMA BISNIS
+------------------------------------------------------------
+1. Klik kanan pada file "index.html".
+2. Pilih "Open With" -> lalu pilih "Notepad" (atau VS Code).
+3. Tekan CTRL + F pada keyboard, cari kata kunci yang 
+   ingin diubah (contoh: "Nama Bisnis Anda").
+4. Ubah teks tersebut sesuai keinginan, lalu tekan CTRL + S 
+   untuk menyimpan perubahan.
+
+------------------------------------------------------------
+2. CARA MENGGANTI FOTO/GAMBAR (OPSIONAL)
+------------------------------------------------------------
+Secara default, website ini menggunakan gambar otomatis dari 
+internet. Jika Anda ingin menggantinya dengan foto sendiri:
+
+1. Siapkan foto Anda (format .jpg atau .png).
+2. Simpan foto tersebut dalam folder yang SAMA dengan file index.html.
+3. Di Notepad, cari kode: src="https://images.unsplash..."
+4. Ganti seluruh link di dalam tanda petik tersebut dengan 
+   NAMA FILE FOTO Anda.
+   Contoh: src="foto-kedai.jpg" (Pastikan namanya sama persis).
+
+------------------------------------------------------------
+3. CARA MENGGANTI NOMOR WHATSAPP (WAJIB)
+------------------------------------------------------------
+1. Di Notepad, tekan CTRL + F dan cari: "wa.me/"
+2. Anda akan menemukan link seperti: https://wa.me/628xxxxxx
+3. Ubah angkanya menjadi nomor WhatsApp Anda.
+   *Gunakan kode negara 62 di depan (Contoh: 628123456789).*
+
+------------------------------------------------------------
+4. CARA ONLINE-KAN WEBSITE (GRATIS!)
+------------------------------------------------------------
+Agar website Anda bisa diakses pelanggan di internet 24 jam:
+1. Kunjungi www.netlify.com atau www.vercel.com (Daftar gratis).
+2. Drag & Drop (Seret) folder website Anda ke kotak upload.
+3. Website Anda langsung aktif dan memiliki link resmi!
+
+------------------------------------------------------------
+BUTUH BANTUAN? (JASA SETUP DHS)
+------------------------------------------------------------
+Jika Anda sibuk atau ingin terima beres (kami bantu editkan 
+teks, foto, nomor WA, sampai website online 100%), kami 
+menyediakan JASA SETUP dengan biaya hanya Rp100.000 saja.
+
+Hubungi Admin DHS Studio: [WA : 082184268075]
+
+Selamat Berbisnis!
+- DHS Studio -
